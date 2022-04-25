@@ -1,0 +1,12 @@
+.include ../openssl.conf
+
+[ CA_Config ]
+# default_startdate = 19900101000000Z
+# default_enddate = 22000101000000Z
+default_days = 3650
+default_crl_days= 365
+
+x509_extensions = X509_Exts_Issuing_CA
+copy_extensions = copy
+
+policy = Policy_Default

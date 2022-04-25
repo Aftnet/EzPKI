@@ -1,0 +1,10 @@
+.include ../openssl.conf
+
+[ CA_Config ]
+default_days = 365
+default_crl_days= 30
+
+x509_extensions = X509_Exts_TLS_Server
+copy_extensions = copy
+
+policy = Policy_Default

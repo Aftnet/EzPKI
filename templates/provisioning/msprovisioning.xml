@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsCustomizations>
+  <PackageConfig xmlns="urn:schemas-Microsoft-com:Windows-ICD-Package-Config.v1.0">
+    <ID>{%UUID%}</ID>
+    <Name>%ORGNAME% Root CA</Name>
+    <Version>1.2</Version>
+    <OwnerType>ITAdmin</OwnerType>
+    <Rank>0</Rank>
+    <Notes></Notes>
+  </PackageConfig>
+  <Settings xmlns="urn:schemas-microsoft-com:windows-provisioning">
+    <Customizations>
+      <Common>
+        <Certificates>
+          <RootCertificates>
+            <RootCertificate CertificateName="Root CA" Name="Root CA">
+              <CertificatePath>%CACERTPATH%</CertificatePath>
+            </RootCertificate>
+          </RootCertificates>
+        </Certificates>
+      </Common>
+    </Customizations>
+  </Settings>
+</WindowsCustomizations>
