@@ -1,1 +1,3 @@
 *.sh text=auto eol=lf
+templates/ca_folder/* text=auto eol=lf
+openssl.conf* text=auto eol=lf
