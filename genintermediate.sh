@@ -25,7 +25,7 @@ cp "${ABS_DIRECTORY}/openssl.conf_issuing" "${CA_ROOT_DIR}/openssl.conf"
 cd "${CA_ROOT_DIR}"
 
 echo "Generating CA private key"
-openssl genpkey -algorithm rsa -pkeyopt rsa_keygen_bits:4096 -aes-256-cbc -out "${CA_PRIVKEY_PATH}"
+openssl ecparam -genkey -name prime256v1 | openssl ec -aes-256-cbc -out "${CA_PRIVKEY_PATH}"
 echo "Generating CA CSR"
 eval "${GEN_COMMAND}"
 cd ../root
